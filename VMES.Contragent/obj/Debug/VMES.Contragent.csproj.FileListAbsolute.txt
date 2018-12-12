@@ -1,0 +1,37 @@
+C:\Users\Boyarski Dmitry\source\repos\VMES.Contragent\VMES.Contragent\bin\Debug\VMES.Contragent.exe.config
+C:\Users\Boyarski Dmitry\source\repos\VMES.Contragent\VMES.Contragent\bin\Debug\VMES.Contragent.exe
+C:\Users\Boyarski Dmitry\source\repos\VMES.Contragent\VMES.Contragent\bin\Debug\VMES.Contragent.pdb
+C:\Users\Boyarski Dmitry\source\repos\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.csprojAssemblyReference.cache
+C:\Users\Boyarski Dmitry\source\repos\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.Properties.Resources.resources
+C:\Users\Boyarski Dmitry\source\repos\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.csproj.GenerateResource.cache
+C:\Users\Boyarski Dmitry\source\repos\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.csproj.CoreCompileInputs.cache
+C:\Users\Boyarski Dmitry\source\repos\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.exe
+C:\Users\Boyarski Dmitry\source\repos\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.pdb
+C:\Users\Boyarski Dmitry\source\repos\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.MainForm.resources
+C:\Users\Boyarski Dmitry\source\repos\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.View.ContractorForm.resources
+C:\Users\Boyarski Dmitry\source\repos\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.View.ContractorAdd.resources
+C:\Users\Boyarski Dmitry\source\repos\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.View.DealForm.resources
+C:\Users\Boyarski Dmitry\source\repos\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.View.DealInterrop.resources
+C:\Users\Boyarski Dmitry\source\repos\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.View.ContractorFormDialog.resources
+C:\Users\Boyarski Dmitry\source\repos\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.Conponents.FinanceTextBox.resources
+C:\Users\Boyarski Dmitry\source\repos\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.View.SalesForm.resources
+C:\Users\boyarskijdm\Documents\VMES.Contragent\VMES.Contragent\bin\Debug\VMES.Contragent.exe.config
+C:\Users\boyarskijdm\Documents\VMES.Contragent\VMES.Contragent\bin\Debug\VMES.Contragent.exe
+C:\Users\boyarskijdm\Documents\VMES.Contragent\VMES.Contragent\bin\Debug\VMES.Contragent.pdb
+C:\Users\boyarskijdm\Documents\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.csprojAssemblyReference.cache
+C:\Users\boyarskijdm\Documents\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.Conponents.FinanceTextBox.resources
+C:\Users\boyarskijdm\Documents\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.MainForm.resources
+C:\Users\boyarskijdm\Documents\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.Properties.Resources.resources
+C:\Users\boyarskijdm\Documents\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.View.ContractorFormDialog.resources
+C:\Users\boyarskijdm\Documents\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.View.PaymentForm.resources
+C:\Users\boyarskijdm\Documents\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.View.PaymentInterrop.resources
+C:\Users\boyarskijdm\Documents\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.View.SalesMainInterrop.resources
+C:\Users\boyarskijdm\Documents\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.View.DealInterrop.resources
+C:\Users\boyarskijdm\Documents\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.View.ContractorAdd.resources
+C:\Users\boyarskijdm\Documents\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.View.ContractorForm.resources
+C:\Users\boyarskijdm\Documents\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.View.DealForm.resources
+C:\Users\boyarskijdm\Documents\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.View.SalesForm.resources
+C:\Users\boyarskijdm\Documents\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.csproj.GenerateResource.cache
+C:\Users\boyarskijdm\Documents\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.csproj.CoreCompileInputs.cache
+C:\Users\boyarskijdm\Documents\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.exe
+C:\Users\boyarskijdm\Documents\VMES.Contragent\VMES.Contragent\obj\Debug\VMES.Contragent.pdb
