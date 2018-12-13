@@ -48,7 +48,7 @@ namespace VMES.Contragent
 
         private void договорыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DealForm frmDeal = new DealForm();
+            DealForm frmDeal = new DealForm(DealFormType.Base);
             frmDeal.MdiParent = this;
             frmDeal.WindowState = FormWindowState.Normal;
             frmDeal.WindowState = FormWindowState.Maximized;

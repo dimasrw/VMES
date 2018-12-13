@@ -6,6 +6,11 @@ using VMES.Contragent.DataModel;
 
 namespace VMES.Contragent.View
 {
+    public enum DealFormType
+    {   
+        Base,       //форма отображается в качестве основного окна
+        Dialog      //Форма отображается в качестве всплывающего окна
+    }
 
 
 
@@ -23,14 +28,29 @@ namespace VMES.Contragent.View
             get { return this.gridMain; }
         }
 
-        public DealForm()
+        public DealForm(DealFormType dealFormType)
         {
             InitializeComponent();
+            
             
             //строим грид
             gridBuilder = new GridBuilder(gridMain, 2, 1);
             //получаем данные в грид
             GetRows();
+
+            switch (dealFormType)
+            {
+                case DealFormType.Base:
+                    this.btnEdit.Visible = false;
+                    break;
+                case DealFormType.Dialog:
+                    this.btnAdd.Visible = false;
+                    this.btnEdit.Visible = false;
+                    this.btnRemove.Visible = false;
+                    break;
+            }
+
+
         }
 
         /*Работа с БД*/
@@ -191,7 +211,11 @@ namespace VMES.Contragent.View
                 }
             }
         }
-    
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
     
 }

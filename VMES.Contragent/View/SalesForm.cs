@@ -26,13 +26,27 @@ namespace VMES.Contragent.View
             GetRowsMain();
         }
 
-        public SalesForm(int salesID)
+        public SalesForm(int DealID)
         {
-            //для отражения в качетсва всплывающего окна для выбора контрагента
-            btnAddDetail.Visible = false;
-            btnEditDetail.Visible = false;
-            btnDelDetail.Visible = false;
+            InitializeComponent();
+
+            //для отражения в качетсва всплывающего окна для выбора акта
+            btnAddMain.Visible = false;
+            btnEditMain.Visible = false;
+            btnDelMain.Visible = false;
             btnSelect.Visible = true;
+
+            gridBuilder = new GridBuilder(gridMain, 3, 1);
+            gridBuilder = null;
+            gridMain.Columns[4].Visible = false;
+            gridMain.Columns[5].Visible = false;
+            gridMain.Columns[6].Visible = false;
+            //gridBuilder = new GridBuilder(gridDetail, 3, 2);
+            //gridBuilder = null;
+            splitContainer1.Panel2.Hide();
+            splitContainer1.Panel2Collapsed = true;
+
+            GetRowsMainByID(DealID);
         }
 
         public DataGridView SalesGrid
@@ -40,9 +54,41 @@ namespace VMES.Contragent.View
             get { return this.gridMain; }
         }
 
-        public void GetRowMainByID()
+        public void GetRowsMainByID(int DealID)
         {
             // выбирает акты только по ид договора
+            cap = new CommandAndParams("SEL_Sales_Main_Check");
+            cap.AddParam("@DealID", DealID);
+
+            var reader = cap.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                int i = 0;
+                while (reader.Read())
+                {
+                    gridMain.Rows.Add();
+
+                    gridMain.Rows[i].Cells[0].Value = Convert.ToInt32(reader.GetValue(0));
+                    gridMain.Rows[i].Cells[1].Value = Convert.ToInt32(reader.GetValue(1));
+                    gridMain.Rows[i].Cells[2].Value = Convert.ToInt32(reader.GetValue(2));
+                    gridMain.Rows[i].Cells[3].Value = Convert.ToInt32(reader.GetValue(3));
+                    gridMain.Rows[i].Cells[4].Value = Convert.ToString(reader.GetValue(4));
+                    gridMain.Rows[i].Cells[5].Value = Convert.ToString(reader.GetValue(5));
+                    gridMain.Rows[i].Cells[6].Value = Convert.ToDateTime(reader.GetValue(6));
+                    gridMain.Rows[i].Cells[7].Value = Convert.ToString(reader.GetValue(7));
+                    gridMain.Rows[i].Cells[8].Value = Convert.ToDateTime(reader.GetValue(8));
+                    gridMain.Rows[i].Cells[9].Value = Convert.ToDecimal(reader.GetValue(9));
+                    gridMain.Rows[i].Cells[10].Value = Convert.ToDecimal(reader.GetValue(10));
+                    gridMain.Rows[i].Cells[11].Value = Convert.ToDecimal(reader.GetValue(11));
+
+                    i += 1;
+                }
+            }
+
+            reader.Close();
+            cap.CloseConnection();
+            cap = null;
 
         }
         private void GetRowsMain()

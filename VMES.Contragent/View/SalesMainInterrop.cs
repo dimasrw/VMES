@@ -80,7 +80,7 @@ namespace VMES.Contragent.View
         
         private void btnSelContractor_Click(object sender, EventArgs e)
         {
-            dealForm = new DealForm();
+            dealForm = new DealForm(DealFormType.Dialog);
             dealForm.ShowDialog();
 
             int i= dealForm.grdDealPublic.CurrentCell.RowIndex;

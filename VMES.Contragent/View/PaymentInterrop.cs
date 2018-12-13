@@ -81,7 +81,7 @@ namespace VMES.Contragent.View
         
         private void btnSelContractor_Click(object sender, EventArgs e)
         {            
-            dealForm = new DealForm();
+            dealForm = new DealForm(DealFormType.Dialog);
             dealForm.ShowDialog();
 
             int i= dealForm.grdDealPublic.CurrentCell.RowIndex;
@@ -112,15 +112,15 @@ namespace VMES.Contragent.View
 
         private void btnSelSale_Click(object sender, EventArgs e)
         {
-            salesForm = new SalesForm();
+            salesForm = new SalesForm(payment.DealID);
 
             salesForm.ShowDialog();
 
             int i = salesForm.SalesGrid.CurrentCell.RowIndex;
             this.txtSalesNum.Text = Convert.ToString(salesForm.SalesGrid.Rows[i].Cells[7].Value.ToString());
-            this.dtpSalesDate.Value = Convert.ToDateTime(salesForm.SalesGrid.Rows[i].Cells[6].Value.ToString());
+            this.dtpSalesDate.Value = Convert.ToDateTime(salesForm.SalesGrid.Rows[i].Cells[8].Value.ToString());
             
-            payment.SalesID = Convert.ToInt32(salesForm.SalesGrid.Rows[i].Cells[1].Value.ToString());
+            payment.SalesID = Convert.ToInt32(salesForm.SalesGrid.Rows[i].Cells[0].Value.ToString());
 
             salesForm = null;
         }
