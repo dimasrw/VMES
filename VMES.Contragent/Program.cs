@@ -10,6 +10,7 @@ namespace VMES.Contragent
     {
         /// <summary>
         /// Главная точка входа для приложения.
+        /// Проверка работы гита номер три
         /// </summary>
         [STAThread]
         static void Main()
