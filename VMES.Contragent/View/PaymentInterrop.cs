@@ -26,9 +26,10 @@ namespace VMES.Contragent.View
         public PaymentInterrop (Payment payment)
         {
             InitializeComponent();
-            
-            this.payment = payment;
-          
+                      
+
+            InitForm(payment);
+
             /*
             switch (salesWinType)
             {
@@ -77,6 +78,15 @@ namespace VMES.Contragent.View
             */
         }
 
+        private void InitForm(Payment payment)
+        {
+            this.payment = payment;
+
+            this.txtContrName.Text = payment.ContrName;
+            this.txtDealNum.Text = payment.DealName;
+            //this.txtSalesNum.Text=payment.   ????????????????????
+            this.
+        }
       
         
         private void btnSelContractor_Click(object sender, EventArgs e)
@@ -98,16 +108,11 @@ namespace VMES.Contragent.View
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            /*
-            sales.SalesNum = this.txtSalesNum.Text;
-            sales.SalesDate = this.dtpSalesDate.Value;
-            sales.VAT = Convert.ToInt32(this.cmbVAT.Text);
-            sales.SalesSum = Convert.ToDecimal(this.txtSum.Text);
-            sales.SalesBaseSum = Convert.ToDecimal(this.txtBaseSum.Text);
-            sales.SalesTrialSum = Convert.ToDecimal(this.txtTrialSum.Text);
-            
+            payment.PaymentOID = this.txtPaymentNum.Text;
+            payment.PaymentDate = this.dtpPaymentDate.Value;
+            payment.PaymentSum = Convert.ToDecimal(this.txtPaymentSum.Text);
+
             ButtonOkClicked.Invoke(sender, e);
-            */
         }
 
         private void btnSelSale_Click(object sender, EventArgs e)

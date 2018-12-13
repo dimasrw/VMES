@@ -7,9 +7,7 @@ using VMES.Contragent.Model;
 
 namespace VMES.Contragent.View
 {
-
-
-
+       
     public partial class PaymentForm: Form
     {
         private GridBuilder gridBuilder;
@@ -115,56 +113,73 @@ namespace VMES.Contragent.View
             payment = new Payment();
             using (paymentInterrop = new PaymentInterrop(payment))
             {
-                //dealInterrop.ButtonOkClicked += new EventHandler(AddRowDeal);
+                paymentInterrop.ButtonOkClicked += new EventHandler(AddRowPayment);
                 paymentInterrop.ShowDialog();
             }
         }
         
-        private void AddRowDeal(object sender, EventArgs e)
-        {/*
+        private void AddRowPayment(object sender, EventArgs e)
+        {
             int i = gridMain.Rows.Count;
 
             gridMain.Rows.Add();
             gridMain.Rows[i].Visible = false;
-            AddRow(i);
+            //AddRow(i);
 
-            gridMain.Rows[i].Cells[1].Value = dealInterrop.ContrID;
-            gridMain.Rows[i].Cells[2].Value = dealInterrop.ContrTIN;
-            gridMain.Rows[i].Cells[3].Value = dealInterrop.ContrName;
-            gridMain.Rows[i].Cells[4].Value = dealInterrop.DealNumber;
-            gridMain.Rows[i].Cells[5].Value = dealInterrop.DealDate;
-            gridMain.Rows[i].Cells[6].Value = dealInterrop.DealName;
-            gridMain.Rows[i].Cells[7].Value = dealInterrop.DueDate;
+            gridMain.Rows[i].Cells[0].Value = payment.ContractorID;
+            gridMain.Rows[i].Cells[1].Value = payment.DealID;
+            gridMain.Rows[i].Cells[2].Value = payment.SalesID;
+            gridMain.Rows[i].Cells[3].Value = payment.PaymentID;
+            gridMain.Rows[i].Cells[4].Value = payment.ChargeType;
+            gridMain.Rows[i].Cells[5].Value = payment.PaymentType;
+            gridMain.Rows[i].Cells[6].Value = payment.ContrName;
+            gridMain.Rows[i].Cells[7].Value = payment.DealName;
+            gridMain.Rows[i].Cells[8].Value = payment.PaymentOID;
+            gridMain.Rows[i].Cells[9].Value = payment.PaymentDate;
+            gridMain.Rows[i].Cells[10].Value = payment.PaymentSum;
 
-
-            dealInterrop.ButtonOkClicked -= new EventHandler(AddRowDeal);
-            dealInterrop.Close();
+            paymentInterrop.ButtonOkClicked -= new EventHandler(AddRowPayment);
+            paymentInterrop.Close();
             gridMain.Rows[i].Visible = true;
 
-            dealInterrop = null;
+            paymentInterrop = null;
 
             //указываем активную ячейку
-            gridMain.CurrentCell = gridMain.Rows[gridMain.Rows.Count - 1].Cells[2];*/
+            gridMain.CurrentCell = gridMain.Rows[gridMain.Rows.Count - 1].Cells[6];
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
-        {/*
-            using (dealInterrop = new DealInterrop())
+        {
+            payment = new Payment();
+
+            payment.ContractorID = Convert.ToInt32(gridMain.Rows[gridMain.CurrentCell.RowIndex].Cells[0].Value);
+            payment.DealID = Convert.ToInt32(gridMain.Rows[gridMain.CurrentCell.RowIndex].Cells[1].Value);
+            payment.SalesID = Convert.ToInt32(gridMain.Rows[gridMain.CurrentCell.RowIndex].Cells[2].Value);
+            payment.PaymentID = Convert.ToInt32(gridMain.Rows[gridMain.CurrentCell.RowIndex].Cells[3].Value);
+            payment.ChargeType = Convert.ToInt32(gridMain.Rows[gridMain.CurrentCell.RowIndex].Cells[4].Value);
+            payment.PaymentType = Convert.ToInt32(gridMain.Rows[gridMain.CurrentCell.RowIndex].Cells[5].Value);
+            payment.ContrName = Convert.ToString(gridMain.Rows[gridMain.CurrentCell.RowIndex].Cells[6].Value);
+            payment.DealName= Convert.ToString(gridMain.Rows[gridMain.CurrentCell.RowIndex].Cells[7].Value);
+            payment.PaymentOID= Convert.ToString(gridMain.Rows[gridMain.CurrentCell.RowIndex].Cells[8].Value);
+            payment.PaymentDate= Convert.ToDateTime(gridMain.Rows[gridMain.CurrentCell.RowIndex].Cells[9].Value);
+            payment.PaymentSum= Convert.ToDecimal(gridMain.Rows[gridMain.CurrentCell.RowIndex].Cells[10].Value);
+
+            using (paymentInterrop = new PaymentInterrop(payment))
             {
-                              
 
-                dealInterrop.ButtonOkClicked += new EventHandler(EditRowDeal);
-                dealInterrop.FormCaption = "Редактировать";
 
+                //dealInterrop.ButtonOkClicked += new EventHandler(EditRowDeal);
+                //paymentInterrop.FormCaption = "Редактировать";
+                /*
                 dealInterrop.ContrID = Convert.ToInt32(gridMain.Rows[gridMain.CurrentCell.RowIndex].Cells[1].Value.ToString());
                 dealInterrop.ContrTIN = gridMain.Rows[gridMain.CurrentCell.RowIndex].Cells[2].Value.ToString();
                 dealInterrop.ContrName = gridMain.Rows[gridMain.CurrentCell.RowIndex].Cells[3].Value.ToString();
                 dealInterrop.DealNumber = gridMain.Rows[gridMain.CurrentCell.RowIndex].Cells[4].Value.ToString();
                 dealInterrop.DealDate = Convert.ToDateTime(gridMain.Rows[gridMain.CurrentCell.RowIndex].Cells[5].Value.ToString());
                 dealInterrop.DealName = gridMain.Rows[gridMain.CurrentCell.RowIndex].Cells[6].Value.ToString();
-                dealInterrop.DueDate = Convert.ToInt32(gridMain.Rows[gridMain.CurrentCell.RowIndex].Cells[7].Value.ToString());
-                dealInterrop.ShowDialog();
-            }*/
+                dealInterrop.DueDate = Convert.ToInt32(gridMain.Rows[gridMain.CurrentCell.RowIndex].Cells[7].Value.ToString());*/
+                paymentInterrop.ShowDialog();
+            }
         }
 
         private void EditRowDeal(object sender, EventArgs e)
