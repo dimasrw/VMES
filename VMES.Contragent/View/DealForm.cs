@@ -31,24 +31,33 @@ namespace VMES.Contragent.View
         public DealForm(DealFormType dealFormType)
         {
             InitializeComponent();
-            
-            
-            //строим грид
-            gridBuilder = new GridBuilder(gridMain, 2, 1);
-            //получаем данные в грид
-            GetRows();
 
             switch (dealFormType)
             {
                 case DealFormType.Base:
-                    this.btnEdit.Visible = false;
+                    
+                    btnAdd.Visible = true;
+                    btnEdit.Visible = true;
+                    btnRemove.Visible = true;
+                    btnSelect.Visible = false;
+                    
                     break;
                 case DealFormType.Dialog:
                     this.btnAdd.Visible = false;
                     this.btnEdit.Visible = false;
                     this.btnRemove.Visible = false;
+                    this.btnSelect.Visible = true;
                     break;
             }
+
+            
+            Application.DoEvents();
+            //строим грид
+            gridBuilder = new GridBuilder(gridMain, 2, 1);
+            //получаем данные в грид
+            GetRows();
+
+            
 
 
         }

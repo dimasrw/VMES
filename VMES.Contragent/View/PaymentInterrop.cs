@@ -85,7 +85,7 @@ namespace VMES.Contragent.View
             this.txtContrName.Text = payment.ContrName;
             this.txtDealNum.Text = payment.DealName;
             //this.txtSalesNum.Text=payment.   ????????????????????
-            this.
+            //this.
         }
       
         

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSelect = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtContractor = new System.Windows.Forms.TextBox();
             this.btnContractor = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridMain = new System.Windows.Forms.DataGridView();
-            this.btnSelect = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridMain)).BeginInit();
@@ -57,6 +57,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1134, 70);
             this.panel1.TabIndex = 0;
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.Location = new System.Drawing.Point(12, 12);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(109, 35);
+            this.btnSelect.TabIndex = 6;
+            this.btnSelect.Text = "Выбрать";
+            this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // label1
             // 
@@ -134,16 +144,6 @@
             this.gridMain.Size = new System.Drawing.Size(1134, 582);
             this.gridMain.TabIndex = 0;
             // 
-            // btnSelect
-            // 
-            this.btnSelect.Location = new System.Drawing.Point(12, 12);
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(109, 35);
-            this.btnSelect.TabIndex = 6;
-            this.btnSelect.Text = "Выбрать";
-            this.btnSelect.UseVisualStyleBackColor = true;
-            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
-            // 
             // DealForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,7 +151,7 @@
             this.ClientSize = new System.Drawing.Size(1134, 652);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DealForm";
             this.Text = "DealForm";
             this.panel1.ResumeLayout(false);
